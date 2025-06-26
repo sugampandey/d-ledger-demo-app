@@ -1,0 +1,21 @@
+# == Schema Information
+#
+# Table name: companies
+#
+#  id         :integer          not null, primary key
+#  name       :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  docyt_id   :integer
+#  odoo_id    :integer
+#
+
+one:
+  name: MyString
+  odoo_id: 1
+  docyt_id: 1
+
+two:
+  name: MyString
+  odoo_id: 1
+  docyt_id: 1

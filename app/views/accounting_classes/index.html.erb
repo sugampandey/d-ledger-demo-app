@@ -1,0 +1,68 @@
+<div class="content-wrapper">
+  <div class="sidebar">
+    <div class="sidebar-item active" data-section="get">Get Accounting Class</div>
+    <div class="sidebar-item" data-section="list">List Accounting Classes</div>
+    <div class="sidebar-item" data-section="create">Create Accounting Class</div>
+  </div>
+
+  <div class="main-content">      
+    <div class="api-section active" id="getSection">
+      <h2>Get Accounting Class</h2>
+      <form id="getAccountingClassForm">
+        <div class="form-group">
+          <label for="accountingClassId">Accounting Class ID:</label>
+          <input type="number" id="accountingClassId" required>
+        </div>  
+        <div class="form-group">
+          <label for="getCompanyId">Company ID:</label>
+          <input type="number" id="getCompanyId" required>
+        </div>
+        <button type="submit">Send Request</button>
+      </form>
+      <div class="result-container" id="getResult"></div>
+    </div>
+
+    <div class="api-section" id="listSection">
+      <h2>List Accounting Classes</h2>
+      <form id="listAccountingClassForm">
+        <div class="form-group">
+          <label>Company ID:</label>
+          <input type="number" id="listCompanyId" required>
+        </div>
+        <div class="form-group">
+          <label>Active:</label>
+          <select id="active">
+            <option value="true">True</option>
+            <option value="false">False</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Max Results:</label>
+          <input type="number" id="maxResults" value="100">
+        </div>
+        <div class="form-group">
+          <label>Start Position:</label>
+          <input type="number" id="startPosition" value="0">
+        </div>
+        <button type="submit">Send Request</button>
+      </form>
+      <div class="result-container" id="listResult"></div>
+    </div>
+
+    <div class="api-section" id="createSection">
+      <h2>Create Accounting Class</h2>
+      <form id="createAccountingClassForm">
+        <div class="form-group">
+          <label for="createCompanyId">Company ID:</label>
+          <input type="number" id="createCompanyId" required>
+        </div>
+        <div class="form-group">
+          <label for="accountingClassName">Name:</label>
+          <input type="text" id="accountingClassName" required>
+        </div>
+        <button type="submit">Send Request</button>
+      </form>
+      <div class="result-container" id="createResult"></div>
+    </div>
+  </div>
+</div>

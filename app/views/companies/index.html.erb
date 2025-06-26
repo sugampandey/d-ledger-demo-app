@@ -1,0 +1,57 @@
+
+<div class="content-wrapper">
+  <div class="sidebar">
+    <div class="sidebar-item active" data-section="get">Get Company</div>
+    <div class="sidebar-item" data-section="list">List Companies</div>
+    <div class="sidebar-item" data-section="create">Create Company</div>
+  </div>
+
+  <div class="main-content">      
+    <div class="api-section active" id="getSection">
+      <h2>Get Company</h2>
+      <form id="getCompanyForm">
+        <div class="form-group">
+          <label for="companyId">Company ID:</label>
+          <input type="number" id="companyId" required>
+        </div>  
+        <button type="submit">Send Request</button>
+      </form>
+      <div class="result-container" id="getResult"></div>
+    </div>
+
+    <div class="api-section" id="listSection">
+      <h2>List Company</h2>
+      <form id="listCompanyForm">
+        <div class="form-group">
+          <label>Active:</label>
+          <select id="active">
+            <option value="true">True</option>
+            <option value="false">False</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Max Results:</label>
+          <input type="number" id="maxResults" value="100">
+        </div>
+        <div class="form-group">
+          <label>Start Position:</label>
+          <input type="number" id="startPosition" value="0">
+        </div>
+        <button type="submit">Send Request</button>
+      </form>
+      <div class="result-container" id="listResult"></div>
+    </div>
+
+    <div class="api-section" id="createSection">
+      <h2>Create Company</h2>
+      <form id="createCompanyForm">
+        <div class="form-group">
+          <label for="companyName">Name:</label>
+          <input type="text" id="companyName" required>
+        </div>
+        <button type="submit">Send Request</button>
+      </form>
+      <div class="result-container" id="createResult"></div>
+    </div>
+  </div>
+</div>

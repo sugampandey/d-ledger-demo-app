@@ -1,0 +1,117 @@
+<div class="content-wrapper">
+  <div class="sidebar">
+    <div class="sidebar-item active" data-section="get">Get Journal Entry</div>
+    <div class="sidebar-item" data-section="list">List Journal Entries</div>
+    <div class="sidebar-item" data-section="create">Create Journal Entry</div>
+  </div>
+
+  <div class="main-content">      
+    <div class="api-section active" id="getSection">
+      <h2>Get Journal Entry</h2>
+      <form id="getJournalEntryForm">
+        <div class="form-group">
+          <label for="journalEntryId">Journal Entry ID:</label>
+          <input type="number" id="journalEntryId" required>
+        </div>  
+        <div class="form-group">
+          <label for="getCompanyId">Company ID:</label>
+          <input type="number" id="getCompanyId" required>
+        </div>
+        <button type="submit">Send Request</button>
+      </form>
+      <div class="result-container" id="getResult"></div>
+    </div>
+
+    <div class="api-section" id="listSection">
+      <h2>List Journal Entries</h2>
+      <form id="listJournalEntryForm">
+        <div class="form-group">
+          <label for="listCompanyId">Company ID:</label>
+          <input type="number" id="listCompanyId" required>
+        </div>
+        <div class="form-group">
+          <label for="listJournalId">Journal ID:</label>
+          <input type="number" id="listJournalId">
+        </div>
+        <div class="form-group">
+          <label for="dateFrom">Date From:</label>
+          <input type="date" id="dateFrom">
+        </div>
+        <div class="form-group">
+          <label for="dateTo">Date To:</label>
+          <input type="date" id="dateTo">
+        </div>
+        <div class="form-group">
+          <label for="maxResults">Max Results:</label>
+          <input type="number" id="maxResults" value="100">
+        </div>
+        <div class="form-group">
+          <label for="startPosition">Start Position:</label>
+          <input type="number" id="startPosition" value="0">
+        </div>
+        <button type="submit">Send Request</button>
+      </form>
+      <div class="result-container" id="listResult"></div>
+    </div>
+
+    <div class="api-section" id="createSection">
+      <h2>Create Journal Entry</h2>
+      <form id="createJournalEntryForm">
+        <div class="form-group">
+          <label for="createCompanyId">Company ID:</label>
+          <input type="number" id="createCompanyId" required>
+        </div>
+        <div class="form-group">
+          <label for="journalDescription">Description:</label>
+          <input type="text" id="journalDescription">
+        </div>
+        <div class="form-group">
+          <label for="TxnDate">Txn Date:</label>
+          <input type="date" id="TxnDate">
+        </div>
+        
+        <div class="journal-lines-container">
+          <h3>Journal Lines</h3>
+          <div id="journalLines">
+            <div class="journal-line-box">
+              <div class="journal-line">
+                <div class="form-group">
+                  <label>Amount:</label>
+                  <input type="number" class="line-amount" step="0.01" required>
+                </div>
+                <div class="form-group">
+                  <label>Description:</label>
+                  <input type="text" class="line-description">
+                </div>
+                <div class="form-group">
+                  <label>Posting Type:</label>
+                  <select class="line-posting-type" required>
+                    <option value="Debit">Debit</option>
+                    <option value="Credit">Credit</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Account ID:</label>
+                  <input type="number" class="line-account-id" required>
+                </div>
+                <div class="form-group">
+                  <label>Partner ID:</label>
+                  <input type="number" class="line-partner-id" required>
+                </div>
+                <div class="form-group">
+                  <label>Class ID:</label>
+                  <input type="number" class="line-class-id">
+                </div>
+                <button type="button" class="remove-line">Remove</button>
+              </div>
+            </div>
+          </div>
+          <button type="button" id="addJournalLine">Add Journal Line</button>
+        </div>
+        
+        <button type="submit">Send Request</button>
+      </form>
+      <div class="result-container" id="createResult"></div>
+    </div>
+  </div>
+</div>

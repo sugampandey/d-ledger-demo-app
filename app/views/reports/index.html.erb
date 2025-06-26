@@ -1,0 +1,108 @@
+<div class="content-wrapper">
+  <div class="sidebar">
+    <div class="sidebar-item active" data-section="balanceSheet">Get Balance Sheet</div>
+    <div class="sidebar-item" data-section="profitLoss">Get profit Loss</div>
+    <div class="sidebar-item" data-section="generalLedger">Get General Ledger</div>
+  </div>
+
+  <div class="main-content">      
+    <div class="api-section active" id="balanceSheetSection">
+      <h2>Get Balance Sheet</h2>
+      <form id="getBalanceSheetForm">
+        <div class="form-group">
+          <label for="bsCompanyId">Company ID:</label>
+          <input type="number" id="bsCompanyId" required>
+        </div>
+        <div class="form-group">
+          <label for="bsStartDate">Start Date:</label>
+          <input type="date" id="bsStartDate">
+        </div>
+        <div class="form-group">
+          <label for="bsEndDate">End Date:</label>
+          <input type="date" id="bsEndDate">
+        </div>
+        <div class="form-group">
+          <label for="bsPartnerId">Partner ID:</label>
+          <input type="number" id="bsPartnerId">
+        </div>
+        <div class="form-group">
+          <label for="bsAccountId">Account ID:</label>
+          <input type="number" id="bsAccountId">
+        </div>
+        <div class="form-group">
+          <label for="bsAnalyticClassId">Analytic Class ID:</label>
+          <input type="number" id="bsAnalyticClassId">
+        </div>
+        <button type="submit">Send Request</button>
+      </form>
+      <div class="result-container" id="balanceSheetResult"></div>
+    </div>
+
+    <div class="api-section" id="profitLossSection">
+      <h2>Get Profit & Loss </h2>
+      <form id="getProfitLossForm">
+        <div class="form-group">
+          <label for="plCompanyId">Company ID:</label>
+          <input type="number" id="plCompanyId" required>
+        </div>
+        <div class="form-group">
+          <label for="plStartDate">Start Date:</label>
+          <input type="date" id="plStartDate">
+        </div>
+        <div class="form-group">
+          <label for="plEndDate">End Date:</label>
+          <input type="date" id="plEndDate">
+        </div>
+        <button type="submit">Send Request</button>
+      </form>
+      <div class="result-container" id="profitLossResult"></div>
+    </div>
+
+    <div class="api-section" id="generalLedgerSection">
+      <h2>Get General Ledger</h2>
+      <form id="getGeneralLedgerForm">
+        <div class="form-group">
+          <label for="glCompanyId">Company ID:</label>
+          <input type="number" id="glCompanyId" required>
+        </div>
+        <div class="form-group">
+          <label for="glStartDate">Start Date:</label>
+          <input type="date" id="glStartDate">
+        </div>
+        <div class="form-group">
+          <label for="glEndDate">End Date:</label>
+          <input type="date" id="glEndDate">
+        </div>
+        <div class="form-group">
+          <label for="glPartnerId">Partner ID:</label>
+          <input type="number" id="glPartnerId">
+        </div>
+        <div class="form-group">
+          <label for="glAccountId">Account ID:</label>
+          <input type="number" id="glAccountId">
+        </div>
+        <div class="form-group">
+          <label for="glAnalyticClassId">Analytic Class ID:</label>
+          <input type="number" id="glAnalyticClassId">
+        </div>
+        <div class="form-group">
+          <label for="glColumns">Columns (comma separated):</label>
+          <input type="text" id="glColumns" placeholder="e.g. date,description,amount" required>
+        </div>
+        <div class="form-group">
+          <label for="glSortBy">Sort By:</label>
+          <input type="text" id="glSortBy" placeholder="e.g. date">
+        </div>
+        <div class="form-group">
+          <label for="glSortOrder">Sort Order:</label>
+          <select id="glSortOrder">
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
+          </select>
+        </div>
+        <button type="submit">Send Request</button>
+      </form>
+      <div class="result-container" id="generalLedgerResult"></div>
+    </div>
+  </div>
+</div>

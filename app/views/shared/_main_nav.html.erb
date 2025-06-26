@@ -1,0 +1,34 @@
+<div class="main-nav">
+
+  <%= link_to companies_path, class: "main-nav-item #{controller_name == 'companies' ? 'active' : ''}" do %>
+    <span>Company</span>
+  <% end %>
+
+  <%= link_to accounts_path, class: "main-nav-item #{controller_name == 'accounts' ? 'active' : ''}" do %>
+    <span>Accounts</span>
+  <% end %>
+  <%= link_to accounting_classes_path, class: "main-nav-item #{controller_name == 'accounting_classes' ? 'active' : ''}" do %>
+    <span>Accounting Class</span>
+  <% end %>
+
+  <%= link_to customers_path, class: "main-nav-item #{controller_name == 'customers' ? 'active' : ''}" do %>
+    <span>Customers</span>
+  <% end %>
+
+  <%= link_to vendors_path, class: "main-nav-item #{controller_name == 'vendors' ? 'active' : ''}" do %>
+    <span>Vendors</span>
+  <% end %>
+
+  <%= link_to journal_entries_path, class: "main-nav-item #{controller_name == 'journal_entries' ? 'active' : ''}" do %>
+    <span>Journal Entries</span>
+  <% end %>
+
+  <%= link_to reports_path, class: "main-nav-item #{controller_name == 'reports' ? 'active' : ''}" do %>
+    <span>Reports</span>
+  <% end %>
+  
+  
+
+</div>
+
+

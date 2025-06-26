@@ -1,0 +1,77 @@
+<div class="content-wrapper">
+  <div class="sidebar">
+    <div class="sidebar-item active" data-section="get">Get Customer</div>
+    <div class="sidebar-item" data-section="list">List Customers</div>
+    <div class="sidebar-item" data-section="create">Create Customer</div>
+  </div>
+
+  <div class="main-content">      
+    <!-- Get Customer API Section -->
+    <div class="api-section active" id="getSection">
+      <h2>Get Customer</h2>
+      <form id="getCustomerForm">
+        <div class="form-group">
+          <label for="customerId">Customer ID:</label>
+          <input type="number" id="customerId" required>
+        </div>  
+        <div class="form-group">
+          <label for="getCompanyId">Company ID:</label>
+          <input type="number" id="getCompanyId" required>
+        </div>
+        <button type="submit">Send Request</button>
+      </form>
+      <div class="result-container" id="getResult"></div>
+    </div>
+
+    <!-- List Customers API Section -->
+    <div class="api-section" id="listSection">
+      <h2>List Customers</h2>
+      <form id="listCustomersForm">
+        <div class="form-group">
+          <label>Company ID:</label>
+          <input type="number" id="listCompanyId" required>
+        </div>
+        <div class="form-group">
+          <label>Name:</label>
+          <input type="text" id="name">
+        </div>
+        <div class="form-group">
+          <label>Active:</label>
+          <select id="active">
+            <option value="true">True</option>
+            <option value="false">False</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Max Results:</label>
+          <input type="number" id="maxResults" value="100">
+        </div>
+        <div class="form-group">
+          <label>Start Position:</label>
+          <input type="number" id="startPosition" value="0">
+        </div>
+        <button type="submit">Send Request</button>
+      </form>
+      <div class="result-container" id="listResult"></div>
+    </div>
+
+    <!-- Create Customer API Section -->
+    <div class="api-section" id="createSection">
+      <h2>Create Customer</h2>
+      <%= form_tag("/api/v1/customers", multipart: true, id: "createCustomerForm", class: "form") do %>
+        <div class="form-group">
+          <%= label_tag :file, "File:" %>
+          <%= file_field_tag :file %>
+        </div>
+
+        <div class="form-group">
+          <%= label_tag :company_id, "Company ID:" %>
+          <%= number_field_tag :company_id, nil, required: true %>
+        </div>
+
+        <%= submit_tag "Send Request", class: "button" %>
+      <% end %>
+      <div class="result-container" id="createResult"></div>
+    </div>
+  </div>
+</div>
